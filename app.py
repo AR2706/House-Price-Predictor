@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Load the dataset and model
 data = pd.read_csv(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\Bengaluru_House_Data.csv")
-model = pickle.load(open(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\banglore_home_prices_model.pickle", "rb"))
+model = pickle.load(open(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\home_prices_model.pickle", "rb"))
 
 # Load the columns information from the columns.json file
 with open(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\columns.json", "r") as f:
