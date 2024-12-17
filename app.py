@@ -66,7 +66,7 @@ def predict():
     # Make the prediction
     prediction = model.predict(sample.reshape(1, -1))[0]  # Reshape for prediction
 
-    return f" {prediction*10000:,.2f}"
+    return f" {prediction*100000:,.2f}"
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
