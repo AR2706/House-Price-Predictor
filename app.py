@@ -7,11 +7,11 @@ import json
 app = Flask(__name__)
 
 # Load the dataset and model
-data = pd.read_csv(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\Bengaluru_House_Data.csv")
-model = pickle.load(open(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\home_prices_model.pickle", "rb"))
+data = pd.read_csv("Bengaluru_House_Data.csv")
+model = pickle.load(open("\home_prices_model.pickle", "rb"))
 
 # Load the columns information from the columns.json file
-with open(r"E:\New folder\New folder\Project exhibition - Copy (2)\Project exhibition - Copy\columns.json", "r") as f:
+with open("columns.json", "r") as f:
     columns_info = json.load(f)
     availability_values = columns_info["availability_columns"]
     area_values = columns_info["area_columns"]
