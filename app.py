@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Load the dataset and model
 data = pd.read_csv("Bengaluru_House_Data.csv")
-model = pickle.load(open("\home_prices_model.pickle", "rb"))
+model = pickle.load(open("home_prices_model.pickle", "rb"))
 
 # Load the columns information from the columns.json file
 with open("columns.json", "r") as f:
@@ -25,7 +25,7 @@ print(f"Area columns: {len(area_values)}")
 @app.route('/')
 def index():
     locations = data['location'].unique()
-    return render_template('index.htm', locations=locations)
+    return render_template('index.html', locations=locations)
 
 @app.route('/predict', methods=['POST'])
 def predict():
