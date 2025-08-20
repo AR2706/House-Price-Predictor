@@ -1,0 +1,25 @@
+# Git version control folder
+.git
+.gitignore
+
+# Python specific cache files and folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook file used for analysis and model training
+# This is not needed for the running application.
+House_price_predictor.ipynb
+
+# The raw dataset is not needed since the app uses the .pickle model
+Bengaluru_House_Data.csv
+
+# Virtual environment folders
+.venv
+venv
+env
+
+# Documentation and images
+README.md
+images/
